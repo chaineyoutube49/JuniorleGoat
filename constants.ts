@@ -118,7 +118,7 @@ export const AGENCY_DATA = {
       whatsappMessage: "Bonjour, je veux un design graphique",
       color: "emerald",
       portfolio: [
-        { type: 'image', url: logo1Png, title: 'Logo Tech' },
+        { type: 'image', url: logo1.png, title: 'Logo Tech' },
         { type: 'image', url: cartePng, title: 'Charte Graphique' },
         { type: 'image', url: affichePng, title: 'Affiche' },
       ],
