@@ -20,7 +20,7 @@ import chatbotPng from './chatbot.png';
 
 // ✍️ MODIFIEZ LES DONNÉES DE VOTRE AGENCE ICI
 export const AGENCY_DATA = {
-  name: "Junior Goat", // Nom de votre agence
+  name: "Junior IA", // Nom de votre agence
   founder: "Junior", // Votre nom
   
   // 🖼️ LOGO DE L'AGENCE
