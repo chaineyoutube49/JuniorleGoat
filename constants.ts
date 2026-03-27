@@ -2,6 +2,22 @@
 
 import { Video, Palette, Image as ImageIcon, Bot, Globe, Zap, ShieldCheck, DollarSign, Headset, Github, Linkedin, Mail, MessageCircle } from 'lucide-react';
 
+// Import des médias pour qu'ils soient inclus dans le build
+import videoIaFemme from './video ia femme.mp4';
+import cooImage from './coo.jpg';
+import montageVideoImo from './montagevideo imo.mp4';
+import autreVideo from './autre.mp4';
+import videoShort from './video short.mp4';
+import logo1Png from './logo1.png';
+import cartePng from './carte.png';
+import affichePng from './affiche.png';
+import youtube1Png from './youtube1.png';
+import miniaturebusinessPng from './miniaturebusiness.png';
+import coverPng from './cover.png';
+import iaImagePng from './ia image.png';
+import videoiaMp4 from './videoIA.MP4';
+import chatbotPng from './chatbot.png';
+
 // ✍️ MODIFIEZ LES DONNÉES DE VOTRE AGENCE ICI
 export const AGENCY_DATA = {
   name: "Junior Goat", // Nom de votre agence
@@ -48,10 +64,10 @@ export const AGENCY_DATA = {
     title: "L'Origine du GOAT Junior",
     bio: "Passionné par l'innovation technologique et la création visuelle, j'ai fondé cette agence pour offrir aux créateurs et entreprises des solutions digitales de haute qualité, alliant créativité et performance.",
     profileImage: {
-      url: "video ia femme.mp4"
+      url: videoIaFemme
     },
     storyImage: {
-      url: "coo.jpg"
+      url: cooImage
     },
     
     story: "Tout a commencé avec une simple passion pour le montage et le design. Autodidacte et déterminé, j'ai passé des nuits entières à perfectionner mon art. Mon surnom, 'GOAT', vient de ma philosophie : transformer des idées complexes en visuels fluides, harmonieux et percutants.",
@@ -84,9 +100,9 @@ export const AGENCY_DATA = {
       whatsappMessage: "Bonjour, je suis intéressé par le montage vidéo",
       color: "blue",
       portfolio: [
-        { type: 'video', url: 'montagevideo imo.mp4', title: 'Montage Publicitaire' },
-        { type: 'video', url: 'autre.mp4', title: 'Vlog YouTube' },
-        { type: 'video', url: 'video short.mp4', title: 'Short' },
+        { type: 'video', url: montageVideoImo, title: 'Montage Publicitaire' },
+        { type: 'video', url: autreVideo, title: 'Vlog YouTube' },
+        { type: 'video', url: videoShort, title: 'Short' },
       ],
       testimonials: [
         { name: "Marc K.", role: "YouTuber", text: "Un travail exceptionnel, mes vues ont doublé grâce à la qualité du montage !" },
@@ -102,9 +118,9 @@ export const AGENCY_DATA = {
       whatsappMessage: "Bonjour, je veux un design graphique",
       color: "emerald",
       portfolio: [
-        { type: 'image', url: 'logo1.png', title: 'Logo Tech' },
-        { type: 'image', url: 'carte.png', title: 'Charte Graphique' },
-        { type: 'image', url: 'affiche.png', title: 'Affiche' },
+        { type: 'image', url: logo1Png, title: 'Logo Tech' },
+        { type: 'image', url: cartePng, title: 'Charte Graphique' },
+        { type: 'image', url: affichePng, title: 'Affiche' },
       ],
       testimonials: [
         { name: "Jean M.", role: "CEO Startup", text: "Notre nouveau logo fait l'unanimité. Très pro." },
@@ -120,9 +136,9 @@ export const AGENCY_DATA = {
       whatsappMessage: "Bonjour, je souhaite commander des miniatures",
       color: "amber",
       portfolio: [
-        { type: 'image', url: 'youtube1.png', title: 'Miniature Youtube' },
-        { type: 'image', url: 'miniaturebusiness.png', title: 'Miniature Business' },
-        { type: 'image', url: 'cover.png', title: 'Cover' },
+        { type: 'image', url: youtube1Png, title: 'Miniature Youtube' },
+        { type: 'image', url: miniaturebusinessPng, title: 'Miniature Business' },
+        { type: 'image', url: coverPng, title: 'Cover' },
       ],
       testimonials: [
         { name: "Kevin G.", role: "Gamer", text: "Mon CTR est passé de 3% à 12% en une semaine !" },
@@ -138,9 +154,9 @@ export const AGENCY_DATA = {
       whatsappMessage: "Bonjour, je suis intéressé par l'assistance IA",
       color: "purple",
       portfolio: [
-        { type: 'image', url: 'ia image.png', title: 'Génération Image' },
-        { type: 'video', url: 'videoia.mp4', title: 'Video IA' },
-        { type: 'image', url: 'chatbot.png', title: 'Chatbot Personnalisé' },
+        { type: 'image', url: iaImagePng, title: 'Génération Image' },
+        { type: 'video', url: videoiaMp4, title: 'Video IA' },
+        { type: 'image', url: chatbotPng, title: 'Chatbot Personnalisé' },
       ],
       testimonials: [
         { name: "Paul D.", role: "Directeur Marketing", text: "L'IA nous a fait gagner 10h par semaine sur nos tâches répétitives." },
