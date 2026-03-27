@@ -24,12 +24,12 @@ export default defineConfig(({mode}) => {
           manualChunks: undefined,
           assetFileNames: (assetInfo) => {
             if (assetInfo.name && assetInfo.name.match(/\.(mp4|webm|ogg|mp3|wav|flac|aac)$/)) {
-              return 'media/[name].[hash][extname]';
+              return 'media/[name].[extname]';
             }
             if (assetInfo.name && assetInfo.name.match(/\.(png|jpe?g|gif|svg|webp|avif)$/)) {
-              return 'images/[name].[hash][extname]';
+              return 'images/[name].[extname]';
             }
-            return 'assets/[name].[hash][extname]';
+            return 'assets/[name].[extname]';
           },
         },
       },
