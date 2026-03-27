@@ -6,7 +6,44 @@ import {defineConfig, loadEnv} from 'vite';
 export default defineConfig(({mode}) => {
   const env = loadEnv(mode, '.', '');
   return {
-    plugins: [react(), tailwindcss()],
+    plugins: [
+      react(), 
+      tailwindcss(),
+      {
+        name: 'copy-media-files',
+        generateBundle() {
+          // Copier manuellement les fichiers médias
+          const fs = require('fs');
+          const mediaFiles = [
+            'video ia femme.mp4',
+            'coo.jpg',
+            'montagevideo imo.mp4',
+            'autre.mp4',
+            'video short.mp4',
+            'logo1.png',
+            'carte.png',
+            'affiche.png',
+            'youtube1.png',
+            'miniaturebusiness.png',
+            'cover.png',
+            'ia image.png',
+            'videoIA.MP4',
+            'chatbot.png',
+            'monlogo.png'
+          ];
+          
+          mediaFiles.forEach(file => {
+            if (fs.existsSync(file)) {
+              this.emitFile({
+                type: 'asset',
+                fileName: file,
+                source: fs.readFileSync(file)
+              });
+            }
+          });
+        }
+      }
+    ],
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
     },
@@ -19,24 +56,8 @@ export default defineConfig(({mode}) => {
       outDir: 'dist',
       assetsDir: 'assets',
       sourcemap: false,
-      rollupOptions: {
-        output: {
-          manualChunks: undefined,
-          assetFileNames: (assetInfo) => {
-            if (assetInfo.name && assetInfo.name.match(/\.(mp4|webm|ogg|mp3|wav|flac|aac)$/)) {
-              return 'media/[name].[extname]';
-            }
-            if (assetInfo.name && assetInfo.name.match(/\.(png|jpe?g|gif|svg|webp|avif)$/)) {
-              return 'images/[name].[extname]';
-            }
-            return 'assets/[name].[extname]';
-          },
-        },
-      },
     },
     server: {
-      // HMR is disabled in AI Studio via DISABLE_HMR env var.
-      // Do not modify—file watching is disabled to prevent flickering during agent edits.
       hmr: process.env.DISABLE_HMR !== 'true',
     },
   };
